@@ -108,6 +108,9 @@ public partial class CoroutineNode : Node {
         object? routineCurrent = coroutineContext.routine.Current;
 
         switch (routineCurrent) {
+            case null:
+                coroutineContext.delay = 0;
+                break;
             case float f:
                 coroutineContext.delay = f;
                 break;
@@ -117,6 +120,9 @@ public partial class CoroutineNode : Node {
                 completeParagraph(coroutineContext, 0);
                 break;
             case CoroutineContext _coroutineContext:
+                if (_coroutineContext.stop) {
+                    completeParagraph(coroutineContext, 0);
+                }
                 chokeUpCoroutineContextCache.Add(new KeyValuePair<CoroutineContext, CoroutineContext>(_coroutineContext, coroutineContext));
                 break;
         }
