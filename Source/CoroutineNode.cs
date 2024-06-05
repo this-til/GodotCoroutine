@@ -103,6 +103,7 @@ public partial class CoroutineNode : Node {
         if (!coroutineContext.routine.MoveNext()) {
             stopCoroutine(coroutineContext);
             (coroutineContext.routine as IDisposable)?.Dispose();
+            return;
         }
 
         object? routineCurrent = coroutineContext.routine.Current;
