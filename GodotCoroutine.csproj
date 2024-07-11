@@ -6,19 +6,20 @@
         <LangVersion>11</LangVersion>
 
         <PackageId>Til.GodotCoroutine</PackageId>
-        <Version>1.0.1</Version>
+        <Version>1.0.2</Version>
         <Authors>til</Authors>
         <description>一个适用于Godot的携程系统</description>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <copyright>Copyright (c) 2024 til</copyright>
         <language>zh-CN</language>
-         <PackageProjectUrl>https://github.com/this-til/GodotCoroutine</PackageProjectUrl>
-         <RepositoryUrl>https://github.com/this-til/GodotCoroutine</RepositoryUrl>
+    <!--     <PackageProjectUrl>https://github.com/this-til/GodotCoroutine</PackageProjectUrl>
+         <RepositoryUrl>https://github.com/this-til/GodotCoroutine</RepositoryUrl>-->
         <RepositoryType>git</RepositoryType>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <EnablePackageValidation>true</EnablePackageValidation>
         <DebugSymbols>true</DebugSymbols>
+        <RootNamespace>Godot.Coroutine</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
